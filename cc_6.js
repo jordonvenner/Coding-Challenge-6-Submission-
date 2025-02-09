@@ -87,3 +87,16 @@ console.log(`Converted Amount: $${result1}`);
 
 const result2 = convertCurrency(250, 0.85);
 console.log(`Converted Amount: $${result2}`);
+
+
+//Task 6: Higher-Order Functions
+
+function applyBulkDiscount(orders, discountFunction) {
+    return orders.map(discountFunction);
+}
+
+let orders = [150, 700, 950, 300, 1200];
+let discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
+
+console.log(discountedOrders);
+// Expected output: [150, 630, 855, 300, 1080]
