@@ -74,3 +74,16 @@ console.log(`Total Cost: $${cost1}`);
 
 const cost2 = calculateSubscriptionCost("Premium", 12, 0); // Expected: 240
 console.log(`Total Cost: $${cost2}`);
+
+//Task 5: Returning Values
+
+function convertCurrency(amount, exchangeRate) {
+    let convertedAmount = amount * exchangeRate;
+    return convertedAmount.toFixed(2);
+}
+
+const result1 = convertCurrency(100, 1.1);
+console.log(`Converted Amount: $${result1}`);
+
+const result2 = convertCurrency(250, 0.85);
+console.log(`Converted Amount: $${result2}`);
