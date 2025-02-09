@@ -121,3 +121,20 @@ console.log(tracker(100)); // Expected output: "Total Expenses: $100"
 console.log(tracker(200)); // Expected output: "Total Expenses: $300"
 console.log(tracker(50));  // Expected output: "Total Expenses: $350"
 console.log(tracker(150)); // Expected output: "Total Expenses: $500"
+
+
+//Task 8: Recursion in JavaScript
+
+
+function calculateYearsToPromotion(employeeLevel) {
+    // Base case: if the employee is at level 10, no more years are needed
+    if (employeeLevel >= 10) {
+        return 0;
+    } else {
+        // Recursive case: calculate years to reach level 10
+        return 2 + calculateYearsToPromotion(employeeLevel + 1);  // Add 2 years and call the function with the next level
+    }
+}
+
+console.log(calculateYearsToPromotion(8));  // Expected output: "Years to Level 10: 4"
+console.log(calculateYearsToPromotion(6));  // Expected output: "Years to Level 10: 8"
